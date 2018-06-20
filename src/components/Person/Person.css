@@ -1,0 +1,21 @@
+:import('../../styles/Variables.css') {
+  primary-color: primary-color;
+}
+
+:root {
+  --primary-color: primary-color
+}
+
+.wrapper {
+  display: inline-flex;
+  border: 1px solid #6C7A89;
+  flex-direction: column;
+  margin: 1em;
+  padding: 10px;
+  background: var(--primary-color);
+  cursor: pointer;
+}
+
+.wrapper:hover {
+  border-color: #DADFE1;
+}

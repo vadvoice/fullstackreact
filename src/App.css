@@ -1,0 +1,63 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(https://img5.goodfon.ru/original/1920x1377/b/74/paren-gitara-mikrofon-gorlopan.jpg);
+  background-size: cover;
+}
+
+.container {
+  flex: 1;
+  /* background-image: url(https://img5.goodfon.ru/original/1920x1377/b/74/paren-gitara-mikrofon-gorlopan.jpg);
+  background-size: cover; */
+  color: white;
+}
+
+.App-logo {
+  animation: shake infinite 1s linear;
+  height: 80px;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.App-header {
+  background-color: #000000;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: rgb(92, 230, 205);
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
