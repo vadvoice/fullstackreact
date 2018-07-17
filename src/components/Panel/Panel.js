@@ -18,11 +18,23 @@ class Panel extends Component {
       .then(res => res.json())
       .then(r => this.refreshData(r))
       .catch(err => console.error(err))
+
+    // fetch('https://raw.githubusercontent.com/vadvoice/dbFiles/master/levi9.json')
+    //   .then(res => {
+    //     return res.json()
+    //   })
+    //   .then(r => this.setData(r))
+    //   .catch(err => console.error(err))
   }
   refreshData(data) {
     this.setState({
       employees: data,
       filtered: data
+    })
+  }
+  setData(data) {
+    this.setState({
+      articles: data
     })
   }
   handleSearch = txt => {
@@ -54,10 +66,11 @@ class Panel extends Component {
         <div className="container">
           <div className="list">
             {loading && <p>loading...</p>}
-            {(filtered && filtered.length && filtered.map(person => 
+            {(filtered && filtered.length && filtered.map( (person, $index) => 
               <Person 
-                selected={this.state.selectedPerson == person} 
+                selected={this.state.selectedPerson === person} 
                 person={person} 
+                key={$index} 
                 onShowPerson={(e, selected) => this.showPersonDetails(e, selected)} 
               />)
             ) || 'Haven\'t any results'}

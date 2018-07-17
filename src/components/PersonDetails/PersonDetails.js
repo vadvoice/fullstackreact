@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import styles from './PersonDetails.css'
+import './PersonDetails.css'
 
 class PersonDetails extends Component {
   constructor(props) {
@@ -12,12 +12,14 @@ class PersonDetails extends Component {
     const { person } = this.props
     return (
       <div>
-        <img src={person.image} />
+        <img src={person.image} alt={person.first_name} />
         <p>{person.first_name}</p>
       </div>
     );
   }
 }
-
+PersonDetails.propTypes = {
+  person: PropTypes.object
+};
 export default PersonDetails
 

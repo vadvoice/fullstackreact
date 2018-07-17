@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import styles from './Person.css'
-console.log('this is the Component: ', Component)
+import './Person.css'
+
 class Person extends Component {
   constructor(props) {
     super(props)

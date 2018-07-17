@@ -7,6 +7,7 @@ import * as FontAwesome from 'react-icons/lib/fa'
 class SearchForm extends Component {
   constructor(props) {
     super(props)
+    this.name = 'search-form'
   }
 
   render() {
