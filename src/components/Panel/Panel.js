@@ -3,7 +3,7 @@ import Header from '../Header/Header';
 import Person from '../Person/Person';
 import PersonDetails from '../PersonDetails/PersonDetails';
 
-import './Panel.css'
+import styles from './Panel.css'
 
 class Panel extends Component {
   constructor() {
@@ -60,6 +60,7 @@ class Panel extends Component {
   }
   render() {
     const {loading, filtered, selectedPerson} = this.state
+
     return (
       <div className="root-panel-wrapper">
         <Header 
