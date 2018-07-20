@@ -1,10 +1,4 @@
-:import('../../styles/Variables.css') {
-  primary-color: primary-color;
-}
-
-:root {
-  --primary-color: primary-color
-}
+@import '../../styles/Variables.scss';
 
 .wrapper {
   display: inline-flex;
@@ -12,8 +6,8 @@
   flex-direction: column;
   margin: 1em;
   padding: 10px;
-  background: var(--primary-color);
   cursor: pointer;
+  background: $primary-color;
 }
 
 .wrapper:hover {

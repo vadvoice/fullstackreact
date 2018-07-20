@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Employees from './containers/Employees/Employees';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   render() {

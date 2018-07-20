@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import './Person.css'
+import './Person.scss'
 
 class Person extends Component {
   constructor(props) {

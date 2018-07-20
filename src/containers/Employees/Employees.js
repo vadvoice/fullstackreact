@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Panel from '../../components/Panel/Panel';
 
-import './Employees.css'
+import './Employees.scss'
 
 class Employees extends Component {
   render() {

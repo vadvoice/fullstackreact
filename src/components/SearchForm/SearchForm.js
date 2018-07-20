@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import './SearchForm.css'
+import './SearchForm.scss'
 import * as FontAwesome from 'react-icons/lib/fa'
 
 class SearchForm extends Component {

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import SearchFrom from '../SearchForm/SearchForm'
 
-import './Header.css'
+import './Header.scss'
 import * as FontAwesome from 'react-icons/lib/fa'
 
 class Header extends Component {
