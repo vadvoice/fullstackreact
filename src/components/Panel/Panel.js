@@ -3,7 +3,7 @@ import Header from '../Header/Header';
 import Person from '../Person/Person';
 import PersonDetails from '../PersonDetails/PersonDetails';
 
-import styles from './Panel.scss'
+import './Panel.scss'
 
 class Panel extends Component {
   constructor() {
