@@ -12,3 +12,5 @@ build:
 ```
 open ./build/index.html
 
+
+website: https://build-bpqttcjldm.now.sh/
