@@ -14,7 +14,6 @@ import './App.scss';
 class App extends Component {
   render() {
     return (
-      <div className="App">
 	   	<Router>
 	   		<Switch>
 	   			<Route
@@ -37,7 +36,6 @@ class App extends Component {
 	   			
 	   		</Switch>
 	   	</Router>
-      </div>
     );
   }
 }
