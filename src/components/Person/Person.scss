@@ -1,15 +1,15 @@
 @import '../../styles/Variables';
 
 .wrapper {
-  display: inline-flex;
-  border: 1px solid #6C7A89;
-  flex-direction: column;
-  margin: 1em;
-  padding: 10px;
-  cursor: pointer;
-  background: $primary-color;
+    display: inline-flex;
+    border: 1px solid #6C7A89;
+    flex-direction: column;
+    margin: 1em;
+    padding: 10px;
+    cursor: pointer;
+    background: $primary-color;
 }
 
 .wrapper:hover {
-  border-color: #DADFE1;
+    border-color: #DADFE1;
 }

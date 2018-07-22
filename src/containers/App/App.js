@@ -6,8 +6,8 @@ import {
   Link
 } from 'react-router-dom'
 
-import Employees from './containers/Employees/Employees';
-import About from './containers/About/About';
+import Employees from '../../containers/Employees/Employees';
+import About from '../../containers/About/About';
 
 import './App.scss';
 
@@ -24,7 +24,7 @@ class App extends Component {
 		              	<Link to='/about'>About</Link>
 		                <Employees />
 		              </div>
-		            )} />
+				)} />
 	   			<Route
 	   				path="/about"
 	        		render={(renderProps) => (

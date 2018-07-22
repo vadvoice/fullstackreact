@@ -1,13 +1,31 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
 
-class About extends Component {
-  render() {
-    return (
-      <p>
-      	About content!
-      </p>
-    )
+const mapStateToProps = state => {
+  return {
+    currentTime: state.currentTime
   }
 }
 
-export default About
+// class About extends Component {
+//   render() {
+//     return (
+//       <p>
+//       	About content!
+//       </p>
+//     )
+//   }
+// }
+
+const About = (props) => {
+  return (
+    <div className="home">
+      <h1>Welcome home!</h1>
+      <p>Current time: {props.currentTime}</p>
+    </div>
+  );
+}
+
+export default connect(
+  mapStateToProps
+)(About);
