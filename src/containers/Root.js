@@ -9,6 +9,7 @@ const Root = (props) => {
 		<Provider store={store}>
 			<App />
 		</Provider>
-	);}
+	);
+}
 
 export default Root;

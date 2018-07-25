@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
+import { fetchNewTime } from '../../redux/actionCreators';
 
 const mapStateToProps = state => {
   return {
@@ -7,25 +8,33 @@ const mapStateToProps = state => {
   }
 }
 
-// class About extends Component {
-//   render() {
-//     return (
-//       <p>
-//       	About content!
-//       </p>
-//     )
-//   }
-// }
+const mapDispatchToProps = dispatch => ({
+  updateTime: () => dispatch(fetchNewTime())
+})
 
-const About = (props) => {
-  return (
-    <div className="home">
-      <h1>Welcome home!</h1>
-      <p>Current time: {props.currentTime}</p>
-    </div>
-  );
+class About extends Component {
+  constructor(props) {
+    super(props)
+  }
+  pushNewDate() {
+    this.props.dispatch({
+      type: 'FETCH_NEW_TIME',
+      payload: new Date()
+    })
+  }
+  render() {
+    console.log(this)
+    return (
+      <section>
+      	<h1>About content!</h1>
+        <p>Current time: {this.props.currentTime}</p>
+        <button onClick={e => this.props.updateTime()}>set new time</button>
+      </section>
+    )
+  }
 }
 
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(About);
