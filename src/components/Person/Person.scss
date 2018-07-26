@@ -1,15 +1,20 @@
 @import '../../styles/Variables';
 
-.wrapper {
+.person-card {
+    position: relative;
+
     display: inline-flex;
-    border: 1px solid #6C7A89;
     flex-direction: column;
     margin: 1em;
     padding: 10px;
     cursor: pointer;
     background: $primary-color;
-}
-
-.wrapper:hover {
-    border-color: #DADFE1;
+    border: 1px solid $secondary-color;
+    transform-style: preserve-3d;
+    transition: .3s transform;
+    border-radius: 5px;
+    color: $secondary-text;
+    &:hover {
+	    transform: rotateY(20deg);
+    }
 }

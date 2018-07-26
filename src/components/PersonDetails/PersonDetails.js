@@ -7,9 +7,9 @@ class PersonDetails extends Component {
   render() {
     const { person } = this.props
     return (
-      <div>
+      <div className="person-details-wrapper">
         {<img src={person.image} alt={person.first_name} />}
-        {<p className="primary">{person.first_name}</p>}
+        {<p>{person.first_name}</p>}
       </div>
     );
   }

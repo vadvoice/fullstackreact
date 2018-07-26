@@ -11,13 +11,9 @@ class Person extends Component {
     }
   }
 
-  componentWillReceiveProps() {
-    console.log('this is receiving ptops!')
-  }
-
   render() {
     const {person} = this.props
-    let wrapperClasses= ['wrapper']
+    let wrapperClasses= ['person-card']
     if(this.props.selected) {
       wrapperClasses.push('active')
     }

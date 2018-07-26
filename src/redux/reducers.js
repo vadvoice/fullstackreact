@@ -1,7 +1,8 @@
 import * as types from './types';
 
 export const initialState = {
-    currentTime: new Date().toString()
+    currentTime: new Date().toString(),
+    user: {}
 }
 
 export const rootReducer = (state = initialState, action) => {
@@ -11,4 +12,5 @@ export const rootReducer = (state = initialState, action) => {
         default:
             return state;
     }
+    return state
 }

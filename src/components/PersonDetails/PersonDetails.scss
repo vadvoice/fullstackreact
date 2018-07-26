@@ -1,5 +1,10 @@
 @import '../../styles/Variables';
 
-.primary {
-  color: $primary-color;
+.person-details-wrapper {
+    color: $secondary-text;
+    img {
+        width: 2em;
+        height: 2em;
+        filter: drop-shadow(0px 0px  5px #fff)
+    }
 }

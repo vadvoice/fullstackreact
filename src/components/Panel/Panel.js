@@ -15,8 +15,8 @@ class Panel extends Component {
   }
   componentDidMount() {
     // TODO: uncoment to production
-    fetch('https://raw.githubusercontent.com/vadvoice/dbFiles/master/persons.json')
-    // fetch('http://localhost:1234/people')
+    // fetch('https://raw.githubusercontent.com/vadvoice/dbFiles/master/persons.json')
+    fetch('http://localhost:1234/people')
       .then(res => res.json())
       .then(r => this.refreshData(r))
       .catch(err => console.error(err))
@@ -59,13 +59,14 @@ class Panel extends Component {
     })
   }
   render() {
-    const {loading, filtered, selectedPerson} = this.state
-
+    const { loading, filtered, selectedPerson } = this.state
+    const { currentTime } = this.props
     return (
       <div className="root-panel-wrapper">
         <Header 
           title="Employers" 
           onSeachRequest={this.handleSearch.bind(this)}
+          currentTime={currentTime}
         />
         <div className="container">
           <div className="list">
