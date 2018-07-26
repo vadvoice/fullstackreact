@@ -64,7 +64,6 @@ class Header extends Component {
     return (
       <header className="header">
         <div className="header-button-wrapper">
- 
           <div 
             className="menu-btn" 
             onClick={(e) => this.toggleOpen(e)}

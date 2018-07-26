@@ -23,7 +23,9 @@ class App extends Component {
 	        		render={(renderProps) => {
 						return (
 			              <div>
-			              	<Link to='/about'>About</Link>
+			              	<div className="navigation">
+			              		<Link to='/about'>About</Link>
+			              	</div>
 			                <Employees { ...props } />
 			              </div>
 						)
@@ -33,7 +35,9 @@ class App extends Component {
 	   				path="/about"
 	        		render={(renderProps) => (
 		              <div>
-		              	<Link to='/'>Home</Link>
+		              	<div className="navigation">
+		              		<Link to='/'>Home</Link>
+		              	</div>
 		                <About { ...props } />
 		              </div>
 		            )} />

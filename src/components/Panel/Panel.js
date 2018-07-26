@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Header from '../Header/Header';
 import Person from '../Person/Person';
 import PersonDetails from '../PersonDetails/PersonDetails';
+import Button from '../Button/Button'
 
 import './Panel.scss'
 
@@ -58,6 +59,9 @@ class Panel extends Component {
       selectedPerson: selected
     })
   }
+  log(e) {
+    console.log(e)
+  }
   render() {
     const { loading, filtered, selectedPerson } = this.state
     const { currentTime } = this.props
@@ -81,6 +85,9 @@ class Panel extends Component {
             ) || 'Haven\'t any results'}
           </div>
           <div className="selected">
+            <Button 
+              placeholder='some btn'
+            ></Button>
             {selectedPerson && <PersonDetails person={selectedPerson}></PersonDetails>}
           </div>
         </div>
