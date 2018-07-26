@@ -77,28 +77,28 @@
         text-shadow: 2px 2px 4px $text-shadow;
     }
 
-    .design {
+    .home {
         transition-delay: .05s;
     }
-    .idea {
+    .pacman {
         transition-delay: .1s;
     }
-    .photos {
+    .bullhorn {
         transition-delay: .15s;
     }
-    .hands {
+    .connection {
         transition-delay: .2;
     }
-    .address {
+    .location2 {
         transition-delay: .25s;
     }
-    .group {
+    .bubbles {
         transition-delay: .3s;
     }
-    .battery {
+    .scissors {
         transition-delay: .35s;
     }
-    .calendar {
+    .amazon {
         transition-delay: .4s;
     }
 
@@ -109,31 +109,31 @@
         animation-iteration-count: infinite;
     }
     /* first bunch */
-    .btn_active .design {
+    .btn_active .home {
         transform: translate(130%, 0%)
     }
-    .btn_active .idea {
+    .btn_active .pacman {
         transform: translate(100%, 100%)
     }
-    .btn_active .photos {
+    .btn_active .bullhorn {
         transform: translate(0%, 130%)
     }
     /* second bunch */
-    .btn_active .hands {
+    .btn_active .connection {
         transform: translate(-100%, 100%)
     }
-    .btn_active .address {
+    .btn_active .location2 {
         transform: translate(-130%, 0%)
     }
-    .btn_active .group {
+    .btn_active .bubbles {
         transform: translate(-100%, -100%)
     }
 
     /* last bunch */
-    .btn_active .battery {
+    .btn_active .scissors {
         transform: translate(0%, -130%)
     }
-    .btn_active .calendar {
+    .btn_active .amazon {
         transform: translate(100%, -100%)
     }
 

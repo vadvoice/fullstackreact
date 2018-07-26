@@ -16,6 +16,17 @@ import { bubbles } from 'react-icons-kit/icomoon/bubbles';
 import { scissors } from 'react-icons-kit/icomoon/scissors';
 import { amazon } from 'react-icons-kit/icomoon/amazon';
 
+const links = [
+  {name: 'home', icon: home},
+  {name: 'pacman', icon: pacman},
+  {name: 'bullhorn', icon: bullhorn},
+  {name: 'connection', icon: connection},
+  {name: 'location2', icon: location2},
+  {name: 'bubbles', icon: bubbles},
+  {name: 'scissors', icon: scissors},
+  {name: 'amazon', icon: amazon}
+]
+
 class Header extends Component {
   constructor(props) {
     super(props)
@@ -61,37 +72,11 @@ class Header extends Component {
            <div className="menu-icon">
               <Icon icon={bars}/>
            </div>
-
-            {/*<!-- first bunch -->*/}
-            <a className="link design" href="">
-              <Icon icon={home}/>
-            </a>
-            <a className="link idea" href="">
-              <Icon icon={pacman}/>
-            </a>
-            <a className="link photos" href="">
-              <Icon icon={bullhorn}/>
-            </a>
-
-            {/*<!-- second bunch -->*/}
-            <a className="link hands" href="">
-              <Icon icon={connection}/>
-            </a>
-            <a className="link address" href="">
-              <Icon icon={location2}/>
-            </a>
-            <a className="link group" href="">
-              <Icon icon={bubbles}/>
-            </a>
-
-            {/*<!-- third bunch -->*/}
-            <a className="link battery" href="">
-              <Icon icon={scissors}/>
-            </a>
-            <a className="link calendar" href="">
-              <Icon icon={amazon}/>
-            </a>
-           
+            {
+              (links && links.length) && links.map((l, i) => <a key={`icon-${i}`} className={`link ${l.name}`}>
+                  <Icon icon={l.icon} />
+                </a>)
+            }
           </div>
 
         </div>
