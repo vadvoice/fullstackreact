@@ -8,7 +8,6 @@ export const initialState = {
 export const rootReducer = (state = initialState, action) => {
     switch (action.type) {
         case types.FETCH_NEW_TIME:
-        	console.log('action: ', action)
             return { ...state, currentTime: action.payload }
         default:
             return state;
