@@ -13,7 +13,5 @@ build:
 open ./build/index.html
 
 
-website: 
-```
-https://build-fulauyqexn.now.sh/
-```
+website: [site](https://www.google.com)
+
