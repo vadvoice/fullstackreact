@@ -6,11 +6,13 @@ class Button extends Component {
         console.log(e)
     }
     render() {
-        const { placeholder, log } = this.props
+        const { placeholder, propAction } = this.props
+        const action = propAction ? propAction : this.doingSomething
+
         return ( <button 
         	className = "btn draw-border"
-            onClick = {
-                (e) => this.doingSomething(e) } >
+            onClick = {(e) => action(e) }
+            >
             { placeholder } 
             </button>
         );

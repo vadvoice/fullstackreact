@@ -1,11 +1,33 @@
 
 $main-color: #1D053A;
+
 $primary-color: #000000;
-$primary-text: #212121;
 $secondary-color: #313773;
+
+
+//text
+$primary-text: #212121;
 $secondary-text: #F5F5F5;
 $text-shadow: #212121;
 
-$decoration: #B2EBF2;
 
+// decorations
+$decoration: #B2EBF2;
 $gradient: linear-gradient(#000, #262A38);
+
+// media queries
+$mobile-portrait: 420px;
+$mobile-landscape: 736px;
+$tablet-portrait: 800px;
+$tablet-landscape: 1024px;
+$desktop: 1120px;
+$middle-desktop: 1280px;
+$large-desktop: 1920px;
+
+// dimensions
+$padding: var(--padding, 0.5em);
+$margin: var(--margin, 1em);
+$gap: var(--gap, 2em);
+$border-radius: var(--border-radius, 2px);
+$border: var(--border, thin solid var(--border-color, $decoration));
+$box-shadow: var(--box-shadow, 0 1px 3px 0 rgba(0, 0, 0, 0.12));

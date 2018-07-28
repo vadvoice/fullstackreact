@@ -1,5 +1,6 @@
 import React from 'react';
 import { Provider, connect } from 'react-redux';
+import { bindActionCreators } from 'redux'
 import App from './App/App';
 import configureStore from '../redux/configureStore';
 import { fetchNewTime } from '../redux/actionCreators'
@@ -14,7 +15,7 @@ const putStateToProps = state => {
 
 const putActionsToProps = dispatch => {
   return ({
-    updateTime: () => dispatch(fetchNewTime())
+    updateTime: bindActionCreators(fetchNewTime, dispatch)
   })
 }
 
@@ -29,36 +30,3 @@ const Root = (props) => {
 }
 
 export default Root;
-
-// import React, { Component } from 'react';
-// import { Provider } from 'react-redux';
-// import App from './App/App';
-// import configureStore from '../redux/configureStore'
-// import { connect } from 'react-redux'
-// import { fetchNewTime } from '../redux/actionCreators'
-
-// const putStateToProps = state => {
-//   return {
-//     currentTime: state.currentTime
-//   }
-// }
-
-// const putActionsToProps = dispatch => {
-//   return ({
-//     updateTime: () => dispatch(fetchNewTime())
-//   })
-// }
-
-// const store = configureStore()
-
-// class Root extends Component {
-//   render() {
-//   	return (
-// 			<Provider store={store}>
-// 				<App />
-// 			</Provider>
-// 		);
-// 	}
-// }
-
-// export default connect(putStateToProps, putActionsToProps)(Root);

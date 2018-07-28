@@ -22,7 +22,7 @@ class App extends Component {
 	   				path="/"
 	        		render={(renderProps) => {
 						return (
-			              <div>
+			              <div className="container">
 			              	<div className="navigation">
 			              		<Link to='/about'>About</Link>
 			              	</div>
@@ -34,7 +34,7 @@ class App extends Component {
 	   			<Route
 	   				path="/about"
 	        		render={(renderProps) => (
-		              <div>
+		              <div className="container">
 		              	<div className="navigation">
 		              		<Link to='/'>Home</Link>
 		              	</div>

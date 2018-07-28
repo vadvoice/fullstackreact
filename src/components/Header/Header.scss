@@ -4,10 +4,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 1em;
+    padding: $gap;
     background: $primary-color;
     color: #ffffff;
-    height: 15%;
     box-sizing: border-box;
 
     .header-button-wrapper {
