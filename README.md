@@ -13,5 +13,5 @@ build:
 open ./build/index.html
 
 
-website: [site](https://www.google.com)
+website: [site](https://build-jvazluzpxw.now.sh/)
 

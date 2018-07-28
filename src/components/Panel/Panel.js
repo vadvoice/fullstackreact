@@ -17,6 +17,9 @@ class Panel extends Component {
     }
   }
   componentDidMount() {
+    // TODO localhost database!
+    // fetch('http://localhost:1234/people')
+
     fetch('https://raw.githubusercontent.com/vadvoice/dbFiles/master/persons.json')
       .then(res => res.json())
       .then(r => this.refreshData(r))
