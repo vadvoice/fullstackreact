@@ -24,7 +24,9 @@ class SearchForm extends Component {
       >
         <input 
           ref="searchInput"
-          onInput={this.props.filterRequest}
+          onChange={(e) => {
+            this.props.updateSeachStr(e.target.value)
+          }}
           className={searchClasses.join(' ')}
           type="search"
           name="search"

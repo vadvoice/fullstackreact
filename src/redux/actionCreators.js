@@ -7,6 +7,13 @@ export const fetchNewTime = (e) => {
     }
 }
 
+export const searchString = (e) => {
+    return {
+        type: types.SEARCH_STR,
+        payload: e
+    }
+}
+
 export const login = (user) => ({
     type: types.LOGIN,
     payload: user

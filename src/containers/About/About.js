@@ -8,9 +8,8 @@ class About extends Component {
       <section>
       	<h1>About content!</h1>
         <p>Current time: {this.props.currentTime}</p>
-        {/*<button onClick={e => updateTime(e)}>update time</button>*/}
         <Button 
-              placeholder='some btn'
+              placeholder='update start time!'
               propAction={updateTime}
             ></Button>
       </section>

@@ -8,10 +8,12 @@ class Button extends Component {
     render() {
         const { placeholder, propAction } = this.props
         const action = propAction ? propAction : this.doingSomething
-
         return ( <button 
         	className = "btn draw-border"
-            onClick = {(e) => action(e) }
+            onClick = {(e) => {
+                    action(e)
+                }
+            }
             >
             { placeholder } 
             </button>

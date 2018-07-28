@@ -5,10 +5,9 @@ import './Employees.scss'
 
 class Employees extends Component {
   render() {
-  	const { currentTime } = this.props
     return (
     	<div>
-      		<Panel currentTime={currentTime} />
+      		<Panel {...this.props} />
     	</div>
     )
   }

@@ -37,7 +37,7 @@ class Header extends Component {
   }
   submitData(e) {
     e.preventDefault()
-    this.props.onSeachRequest(this.state.filterStr)
+    this.props.onSeachRequest(this.props.searchStr)
   }
   visibleRequest() {
     this.setState({
@@ -61,6 +61,7 @@ class Header extends Component {
   }
 
   render() {
+    const { searchStr } = this.props
     return (
       <header className="header">
         <div className="header-button-wrapper">
@@ -87,6 +88,7 @@ class Header extends Component {
             openSearchBox= { this.visibleRequest.bind(this) }
             handleSubmit={ $event => this.submitData($event) }
             filterRequest= { $event => this.setFilterString($event) }
+            {...this.props}
           />
         </div>
       </header>

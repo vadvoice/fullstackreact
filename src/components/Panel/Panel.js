@@ -58,6 +58,7 @@ class Panel extends Component {
           title="Employers" 
           onSeachRequest={this.handleSearch.bind(this)}
           currentTime={currentTime}
+          {...this.props}
         />
         <div className="container">
           <div className="list">
