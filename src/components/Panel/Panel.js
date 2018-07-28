@@ -3,6 +3,7 @@ import Header from '../Header/Header';
 import Person from '../Person/Person';
 import PersonDetails from '../PersonDetails/PersonDetails';
 import Button from '../Button/Button'
+import ReactModal from '../Modal/Modal'
 
 import './Panel.scss'
 
@@ -11,13 +12,12 @@ class Panel extends Component {
     super()
     this.state = {
       loading: false,
-      employees: []
+      employees: [],
+      modalOpen: false
     }
   }
   componentDidMount() {
-    // TODO: uncoment to production
-    // fetch('https://raw.githubusercontent.com/vadvoice/dbFiles/master/persons.json')
-    fetch('http://localhost:1234/people')
+    fetch('https://raw.githubusercontent.com/vadvoice/dbFiles/master/persons.json')
       .then(res => res.json())
       .then(r => this.refreshData(r))
       .catch(err => console.error(err))
@@ -49,6 +49,11 @@ class Panel extends Component {
   log(e) {
     console.log(e)
   }
+  openModal() {
+    this.setState({
+      modalOpen: !this.state.modalOpen
+    })
+  }
   render() {
     const { loading, filtered, selectedPerson } = this.state
     const { currentTime } = this.props
@@ -73,10 +78,20 @@ class Panel extends Component {
             ) || 'Haven\'t any results'}
           </div>
           <div className="selected">
-            <Button 
-              placeholder='some btn'
-            ></Button>
-            {selectedPerson && <PersonDetails person={selectedPerson}></PersonDetails>}
+            {selectedPerson && <div>
+              <PersonDetails person={selectedPerson}></PersonDetails>
+              {/* <Button 
+                placeholder='details'
+              ></Button> */}
+              <button
+                onClick={(e) => this.openModal()}
+              >Details</button>
+              <ReactModal
+                toggleRequest={this.openModal.bind(this)}
+                toggleStatus={this.state.modalOpen}
+                info={selectedPerson}
+              ></ReactModal>
+            </div>}
           </div>
         </div>
     </div>
