@@ -18,9 +18,9 @@ class Panel extends Component {
   }
   componentDidMount() {
     // TODO localhost database!
-    // fetch('http://localhost:1234/people')
+    // fetch('https://raw.githubusercontent.com/vadvoice/dbFiles/master/persons.json')
 
-    fetch('https://raw.githubusercontent.com/vadvoice/dbFiles/master/persons.json')
+    fetch('http://localhost:1234/people')
       .then(res => res.json())
       .then(r => this.refreshData(r))
       .catch(err => console.error(err))
@@ -60,6 +60,7 @@ class Panel extends Component {
   render() {
     const { loading, filtered, selectedPerson } = this.state
     const { currentTime } = this.props
+    const appElement = document.getElementById('person-details-component')
     return (
       <div className="root-panel-wrapper">
         <Header 
@@ -82,7 +83,7 @@ class Panel extends Component {
           </div>
           <div className="selected">
             {selectedPerson && <div>
-              <PersonDetails person={selectedPerson}></PersonDetails>
+              <PersonDetails person={selectedPerson} id="person-details-component"></PersonDetails>
               {/* <Button 
                 placeholder='details'
               ></Button> */}
@@ -92,7 +93,9 @@ class Panel extends Component {
               <ReactModal
                 toggleRequest={this.openModal.bind(this)}
                 toggleStatus={this.state.modalOpen}
-                info={selectedPerson}
+                header='Person Details'
+                appElement={appElement}
+                body= {<PersonDetails person={selectedPerson} full={true} />}
               ></ReactModal>
             </div>}
           </div>
