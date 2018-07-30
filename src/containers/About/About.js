@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import Button from '../../components/Button/Button'
+import {
+  Link
+} from 'react-router-dom'
+
 
 class About extends Component {
   render() {
@@ -11,7 +15,7 @@ class About extends Component {
         <Button 
               placeholder='update start time!'
               propAction={updateTime}
-            ></Button>
+        ></Button>
       </section>
     )
   }

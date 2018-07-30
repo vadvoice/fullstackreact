@@ -8,6 +8,7 @@ import {
 
 import Employees from '../../containers/Employees/Employees';
 import About from '../../containers/About/About';
+import Navigation from '../../components/Navigation/Navigation';
 
 import './App.scss';
 
@@ -16,33 +17,32 @@ class App extends Component {
   	const props = this.props
     return (
 	   	<Router>
-	   		<Switch>
+	   		<div>
 	   			<Route
-	   				exact
 	   				path="/"
-	        		render={(renderProps) => {
-						return (
+	        		component={ Navigation }
+        		/>
+	   			<Switch>
+		   			<Route
+		   				exact
+		   				path="/home"
+		        		render={(renderProps) => {
+							return (
+				              <div className="container">
+				                <Employees { ...props } />
+				              </div>
+							)
+	        			}
+		        		} />
+		   			<Route
+		   				path="/pacman"
+		        		render={(renderProps) => (
 			              <div className="container">
-			              	<div className="navigation">
-			              		<Link to='/about'>About</Link>
-			              	</div>
-			                <Employees { ...props } />
+			                <About { ...props } />
 			              </div>
-						)
-        			}
-	        		} />
-	   			<Route
-	   				path="/about"
-	        		render={(renderProps) => (
-		              <div className="container">
-		              	<div className="navigation">
-		              		<Link to='/'>Home</Link>
-		              	</div>
-		                <About { ...props } />
-		              </div>
-		            )} />
-	   			
-	   		</Switch>
+			            )} />
+	   			</Switch>
+	   		</div>
 	   	</Router>
     );
   }
