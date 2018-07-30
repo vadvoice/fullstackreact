@@ -2,7 +2,9 @@
 	background: #000;
 }
 header {
-    cursor: pointer;
     display: flex;
     justify-content: space-between;
+    .modal-close {
+    	cursor: pointer;
+    }
 }

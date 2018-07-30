@@ -53,9 +53,11 @@ class Panel extends Component {
     console.log(e)
   }
   openModal() {
-    this.setState({
-      modalOpen: !this.state.modalOpen
-    })
+    return () => {
+      this.setState({
+        modalOpen: !this.state.modalOpen
+      })
+    }
   }
   render() {
     const { loading, filtered, selectedPerson } = this.state
@@ -84,17 +86,16 @@ class Panel extends Component {
           <div className="selected">
             {selectedPerson && <div>
               <PersonDetails person={selectedPerson} id="person-details-component"></PersonDetails>
-              {/* <Button 
+              { <Button 
                 placeholder='details'
-              ></Button> */}
-              <button
-                onClick={(e) => this.openModal()}
-              >Details</button>
+                propAction={this.openModal()}
+              ></Button> }
               <ReactModal
-                toggleRequest={this.openModal.bind(this)}
+                toggleRequest={this.openModal()}
                 toggleStatus={this.state.modalOpen}
                 header='Person Details'
                 appElement={appElement}
+                theme='dark'
                 body= {<PersonDetails person={selectedPerson} full={true} />}
               ></ReactModal>
             </div>}

@@ -42,8 +42,8 @@ class ReactModal extends Component {
               className="modal-close" 
               icon={cross}
               onClick={(e) => {
-              toggleRequest()
-            }}
+                toggleRequest()
+              }}
             />
           </header>
           { body }

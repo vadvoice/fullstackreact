@@ -28,9 +28,26 @@ const links = [
 ]
 
 class Navigation extends Component {
+    constructor() {
+      super()
+      this.selected = null
+    }
     toggleOpen(event) {
       event.preventDefault()
-      event.target.classList.toggle('btn_active')
+      event.target.parentNode.classList.toggle('btn_active')
+    }
+    setToActive(event) {
+      const target = event.target
+      if (target.tagName !== 'A') return
+
+      this.highlight(target)
+    }
+    highlight(node) {
+      if (this.selected) {
+        this.selected.classList.remove('highlight')
+      }
+      this.selected = node
+      this.selected.classList.add('highlight')
     }
     render() {
         return ( 
@@ -38,14 +55,23 @@ class Navigation extends Component {
             <div className="header-button-wrapper">
               <div 
                 className="menu-btn" 
+                >
+               <div 
+                className="menu-icon"
                 onClick={(e) => this.toggleOpen(e)}
                 >
-               <div className="menu-icon">
                   <Icon icon={bars}/>
                </div>
                 {
                   (links && links.length) && links.map((l, i) => 
-                      <Link to={ `${l.name}` } key={`icon-${i}`} className={`link ${l.name}`}><Icon icon={l.icon} /></Link>)
+                      <Link 
+                        to={ `${l.name}` }
+                        key={`icon-${i}`}
+                        className={`link link-${l.name} ${l.name}`}
+                        onClick={(e) => this.setToActive(e)}
+                        >
+                          <Icon icon={l.icon} />
+                      </Link>)
                 }
               </div>
             </div>

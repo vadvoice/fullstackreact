@@ -1,11 +1,10 @@
 import React from 'react';
 import { Provider, connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
-import App from './App/App';
+import App from './App/App.jsx';
 import configureStore from '../redux/configureStore';
 import { fetchNewTime } from '../redux/actionCreators'
 import { searchString } from '../redux/actionCreators'
-import initialState from '../redux/actionCreators'
 const store = configureStore;
 
 const putStateToProps = state => {
