@@ -21,6 +21,9 @@ const themeSchema = {
 }
 
 class ReactModal extends Component {
+  componentWillMount() {
+    Modal.setAppElement('body')
+  }
   render () {
   	const { toggleStatus, toggleRequest, header, body, theme } = this.props
   	const modalStyles = {overlay: {zIndex: 999}};

@@ -64,9 +64,10 @@ $map in $router-links {
 }
 
 .navigation-wrapper {
-    padding: 40px 0;
+    padding: 45px 0;
     display: flex;
     justify-content: center;
+    background: $primary-color;
 }
 
 .header-button-wrapper {
