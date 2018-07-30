@@ -1,44 +1,55 @@
 @import '../../styles/Variables';
+@import '../../styles/Responsive';
 
-.root-panel-wrapper {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  height: 100vh;
-  width: 100vw;
-  background: $gradient;
-  background-size: cover;
-
-  .active {
-    box-shadow: 0 0 15px $secondary-text;
-  }
-
-  .container {
-    display: flex;
-    max-height: 100%;
-    flex: 1;
-    overflow: hidden;
-    border-bottom: 1px solid;
-  }
-
-  .list,
-  .selected {
-    flex: 1;
-  }
-
-  .list {
-    overflow-x: hidden;
-    overflow-y: scroll;
-    border-right: 1px solid;
-    perspective: 1000px;
-    color: $secondary-text;
-  }
-
-  .selected {
+.root-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    background: $gradient;
+    background-size: cover;
 
+    .active {
+        box-shadow: 0 0 15px $secondary-text;
+    }
+
+    .panel-content {
+        display: flex;
+        max-height: 100%;
+        flex: 1;
+        overflow: hidden;
+        border-bottom: 1px solid;
+    }
+
+    .list,
+    .selected {
+        flex: 1;
+    }
+
+    .list {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        border-right: 1px solid;
+        perspective: 1000px;
+        color: $secondary-text;
+    }
+
+    .selected {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @include below($tablet-landscape) {
+        .panel-content {
+            flex-direction: column;
+            .list {
+                border: 0;
+                border-bottom: 1px solid;
+                box-shadow: inset 0 -15px 15px -15px #fff;
+            }
+        }
+    }
+}

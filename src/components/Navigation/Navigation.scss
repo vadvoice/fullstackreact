@@ -63,11 +63,18 @@ $map in $router-links {
     }
 }
 
-.navigation-wrapper {
-    padding: 45px 0;
-    display: flex;
-    justify-content: center;
-    background: $primary-color;
+.navigation {
+    &-wrapper {
+        padding: 45px 0;
+        display: flex;
+        justify-content: space-around;
+        background: $primary-color;
+    }
+    &-logo {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
 }
 
 .header-button-wrapper {

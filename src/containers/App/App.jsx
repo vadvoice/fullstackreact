@@ -29,18 +29,18 @@ class App extends Component {
 		   				path="/home"
 		        		render={(renderProps) => {
 							return (
-				              <div className="container">
+				              <main className="app-content">
 				                <Employees { ...props } />
-				              </div>
+				              </main>
 							)
 	        			}
 		        	} />
 		   			<Route
 		   				path="/pacman"
 		        		render={(renderProps) => (
-			              <div className="container">
+			              <main className="app-content">
 			                <About { ...props } />
-			              </div>
+			              </main>
 			            )
 			        } />
 			        <Route 

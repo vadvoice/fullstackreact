@@ -6,7 +6,7 @@ import './Employees.scss'
 class Employees extends Component {
   render() {
     return (
-    	<div>
+    	<div className="app-body">
       		<Panel {...this.props} />
     	</div>
     )

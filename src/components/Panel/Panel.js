@@ -64,14 +64,14 @@ class Panel extends Component {
     const { currentTime } = this.props
     const appElement = document.getElementById('person-details-component')
     return (
-      <div className="root-panel-wrapper">
+      <div className="root-wrapper">
         <Header 
           title="Employers" 
           onSeachRequest={this.handleSearch.bind(this)}
           currentTime={currentTime}
           {...this.props}
         />
-        <div className="container">
+        <div className="panel-content">
           <div className="list">
             {loading && <p>loading...</p>}
             {(filtered && filtered.length && filtered.map( (person, $index) => 

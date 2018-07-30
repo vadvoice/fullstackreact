@@ -1,4 +1,5 @@
 @import '../../styles/Variables';
+@import '../../styles/Responsive';
 
 .header {
     display: flex;
@@ -8,4 +9,8 @@
     background: $primary-color;
     color: #ffffff;
     box-sizing: border-box;
+    @include below($tablet-landscape) {
+        flex-direction: column;
+        align-items: center;
+    }
 }

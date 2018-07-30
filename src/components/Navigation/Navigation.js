@@ -5,6 +5,8 @@ import {
   Link
 } from 'react-router-dom'
 
+import Logo from '../../img/logo.svg';
+
 import Icon from 'react-icons-kit';
 import { bars } from 'react-icons-kit/fa/bars';
 import { home } from 'react-icons-kit/icomoon/home';
@@ -26,7 +28,7 @@ const links = [
   {name: 'scissors', icon: scissors},
   {name: 'amazon', icon: amazon}
 ]
-
+console.log(Logo)
 class Navigation extends Component {
     constructor() {
       super()
@@ -52,6 +54,9 @@ class Navigation extends Component {
     render() {
         return ( 
           <div className="navigation-wrapper">
+            <Link to="/home">
+              <img src={Logo} className="navigation-logo" alt="logo" />
+            </Link>
             <div className="header-button-wrapper">
               <div 
                 className="menu-btn" 
