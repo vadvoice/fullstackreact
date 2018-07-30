@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 
 import Navigation from '../../components/Navigation/Navigation';
+import Footer from '../../components/Footer/Footer';
 
 import Employees from '../../containers/Employees/Employees';
 import About from '../../containers/About/About';
@@ -49,6 +50,10 @@ class App extends Component {
 			        	component={ NotFound } 
 			        />
 	   			</Switch>
+	   			<Route
+	   				path="/"
+	        		component={ Footer }
+        		/>
 	   		</div>
 	   	</Router>
     );
