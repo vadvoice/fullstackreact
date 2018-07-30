@@ -1,0 +1,8 @@
+@import '../../styles/Variables';
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    background: $primary-color;
+    color: $secondary-text;
+}

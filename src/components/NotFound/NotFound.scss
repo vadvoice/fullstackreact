@@ -1,0 +1,14 @@
+@import '../../styles/Variables';
+
+.text-wrapper {
+    display: flex;
+    font-family: verdana;
+    align-items: center;
+    flex-direction: column;
+    .title {
+        font-size: 80px;
+    }
+    .explanation {
+        font-size: 30px;
+    }
+}

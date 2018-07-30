@@ -5,9 +5,11 @@ import {
   Switch
 } from 'react-router-dom'
 
+import Navigation from '../../components/Navigation/Navigation';
+
 import Employees from '../../containers/Employees/Employees';
 import About from '../../containers/About/About';
-import Navigation from '../../components/Navigation/Navigation';
+import NotFound from '../../components/NotFound/NotFound';
 
 import './App.scss';
 
@@ -16,7 +18,7 @@ class App extends Component {
   	const props = this.props
     return (
 	   	<Router>
-	   		<div>
+	   		<div className="app-container">
 	   			<Route
 	   				path="/"
 	        		component={ Navigation }
@@ -32,14 +34,20 @@ class App extends Component {
 				              </div>
 							)
 	        			}
-		        		} />
+		        	} />
 		   			<Route
 		   				path="/pacman"
 		        		render={(renderProps) => (
 			              <div className="container">
 			                <About { ...props } />
 			              </div>
-			            )} />
+			            )
+			        } />
+			        <Route 
+			        	path='*' 
+			        	exact={true} 
+			        	component={ NotFound } 
+			        />
 	   			</Switch>
 	   		</div>
 	   	</Router>
