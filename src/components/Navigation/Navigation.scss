@@ -8,7 +8,7 @@ connection: #cdb6e3,
 location2: #cb2027,
 bubbles: #883451,
 scissors: #f60,
-amazon: #00aced,
+github: #00aced,
 );
 
 @each $profile,
@@ -47,7 +47,7 @@ scissors: ( transform: translate(0%, -130%),
 transition-delay: .35s,
 transform-selected: translate(0%, -150%) scale(.9),
 ),
-amazon: ( transform: translate(100%, -100%),
+github: ( transform: translate(100%, -100%),
 transition-delay: .4s,
 transform-selected: translate(120%, -120%) scale(.9),
 ));

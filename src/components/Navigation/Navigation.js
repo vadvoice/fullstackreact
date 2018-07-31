@@ -16,7 +16,8 @@ import { connection } from 'react-icons-kit/icomoon/connection';
 import { location2 } from 'react-icons-kit/icomoon/location2';
 import { bubbles } from 'react-icons-kit/icomoon/bubbles';
 import { scissors } from 'react-icons-kit/icomoon/scissors';
-import { amazon } from 'react-icons-kit/icomoon/amazon';
+// import { amazon } from 'react-icons-kit/icomoon/amazon';
+import { github } from 'react-icons-kit/icomoon/github'
 
 const links = [
   {name: 'home', icon: home},
@@ -26,7 +27,7 @@ const links = [
   {name: 'location2', icon: location2},
   {name: 'bubbles', icon: bubbles},
   {name: 'scissors', icon: scissors},
-  {name: 'amazon', icon: amazon}
+  {name: 'github', icon: github}
 ]
 
 class Navigation extends Component {

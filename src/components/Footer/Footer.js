@@ -24,6 +24,7 @@ class Footer extends Component {
     render() {
         return ( 
              <footer className="footer">
+                <img src={Logo} alt="logo" />
                 <div 
                 className="footer-social"
                 >

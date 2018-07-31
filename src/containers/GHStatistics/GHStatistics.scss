@@ -1,0 +1,19 @@
+@import '../../styles/Variables';
+
+.contributors {
+    display: flex;
+    margin: $margin 0;
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+    .contributor {
+        padding: $padding;
+        border: 1px solid $secondary-text;
+        margin-right: $margin;
+    }
+    p {
+        text-transform: capitalize;
+    }
+}

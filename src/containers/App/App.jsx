@@ -10,7 +10,9 @@ import Footer from '../../components/Footer/Footer';
 
 import Employees from '../../containers/Employees/Employees';
 import About from '../../containers/About/About';
+import GHStatistics from '../../containers/GHStatistics/GHStatistics';
 import NotFound from '../../components/NotFound/NotFound';
+
 
 import './App.scss';
 
@@ -42,8 +44,16 @@ class App extends Component {
 			              <main className="app-content">
 			                <About { ...props } />
 			              </main>
-			            )} 
+			            )}
 			            />
+		            <Route
+		   				path="/github"
+		        		render={(renderProps) => (
+			              <main className="app-content">
+			                <GHStatistics { ...props } />
+			              </main>
+			            )}
+		            />
 			        <Route 
 			        	path='*' 
 			        	exact={true} 
