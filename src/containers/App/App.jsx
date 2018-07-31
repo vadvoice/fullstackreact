@@ -42,12 +42,19 @@ class App extends Component {
 			              <main className="app-content">
 			                <About { ...props } />
 			              </main>
-			            )
-			        } />
+			            )} 
+			            />
 			        <Route 
 			        	path='*' 
 			        	exact={true} 
-			        	component={ NotFound } 
+						render={(renderProps) => {
+							return <main className="app-content">
+			                	<NotFound 
+			                		status= {renderProps.location.key}
+			                		title= {renderProps.location.pathname}
+			                	/>
+			              	</main>
+						}}
 			        />
 	   			</Switch>
 	   			<Route

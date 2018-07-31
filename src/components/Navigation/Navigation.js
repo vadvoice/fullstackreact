@@ -28,7 +28,7 @@ const links = [
   {name: 'scissors', icon: scissors},
   {name: 'amazon', icon: amazon}
 ]
-console.log(Logo)
+
 class Navigation extends Component {
     constructor() {
       super()

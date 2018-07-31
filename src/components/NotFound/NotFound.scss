@@ -1,14 +1,19 @@
 @import '../../styles/Variables';
 
-.text-wrapper {
+.notfound-wrapper {
     display: flex;
     font-family: verdana;
     align-items: center;
     flex-direction: column;
+    padding: $margin 0;
     .title {
         font-size: 80px;
     }
     .explanation {
         font-size: 30px;
+    }
+    span {
+        color: $warning;
+        font-weight: bold;
     }
 }
