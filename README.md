@@ -13,5 +13,5 @@ build:
 open ./build/index.html
 
 
-website: [site](https://build-jvazluzpxw.now.sh/)
+website: [site](https://build-xkhiasadyd.now.sh/home)
 
