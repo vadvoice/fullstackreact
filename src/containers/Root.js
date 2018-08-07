@@ -5,6 +5,7 @@ import App from './App/App.jsx';
 import configureStore from '../redux/configureStore';
 import { fetchNewTime } from '../redux/actionCreators'
 import { searchString } from '../redux/actionCreators'
+
 const store = configureStore;
 
 const putStateToProps = state => {

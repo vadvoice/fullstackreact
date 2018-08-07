@@ -1,4 +1,6 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { rootReducer } from './reducers';
 
-export default createStore(rootReducer);
+import { loggingMiddleware } from  './middlewares/loggining'
+
+export default createStore(rootReducer, applyMiddleware(loggingMiddleware));

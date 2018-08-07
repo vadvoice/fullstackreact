@@ -14,6 +14,13 @@ export const searchString = (e) => {
     }
 }
 
+export const fetchPeople = (e) => {
+    return {
+        type: types.FETCH_PEOPLE,
+        payload: e
+    }
+}
+
 export const login = (user) => ({
     type: types.LOGIN,
     payload: user
