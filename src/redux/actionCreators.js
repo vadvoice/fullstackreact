@@ -1,11 +1,15 @@
 import * as types from './types';
 
-export const fetchNewTime = (e) => {
-    return {
-        type: types.FETCH_NEW_TIME,
-        payload: new Date().toString(),
-    }
-}
+const host = 'https://andthetimeis.com'
+
+export const fetchNewTime = ({ timezone = 'pst', str='now'}) => ({
+  type: types.FETCH_NEW_TIME,
+  payload: new Date().toString(),
+  meta: {
+    type: 'api',
+    url: host + '/' + timezone + '/' + str + '.json'
+  }
+})
 
 export const searchString = (e) => {
     return {
