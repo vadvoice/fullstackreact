@@ -7,7 +7,8 @@ class GHStatistics extends Component {
   constructor() {
     super()
     this.state= {
-      publicData: []
+      publicData: [],
+      explanation: {}
     }
   }
   getData() {
@@ -17,9 +18,15 @@ class GHStatistics extends Component {
       fetch('https://api.github.com/repos/octocat/Hello-World/contributors')
         .then(res => res.json())
         .then(response => {
-          this.setState({
-            publicData: response
-          })
+          if ('message' in response) {
+            this.setState({
+              message: response
+            })
+          } else {
+            this.setState({
+              publicData: response
+            })
+          }
         })
         .catch(err => console.error(err))
     }
@@ -37,7 +44,8 @@ class GHStatistics extends Component {
           className='contributors'
         >
 
-          {this.state.publicData && this.state.publicData.map( contributor => <div 
+          {
+            this.state.publicData.length && this.state.publicData.map( contributor => <div 
             className='contributor'
             key={ contributor.id }
             >
@@ -55,7 +63,10 @@ class GHStatistics extends Component {
                 <small>type: { contributor.type }</small>
               </li>
             </ul>
-          </div>)}
+          </div>) || (this.state.explanation && (
+            <p>{ this.state.explanation.message }</p>
+          ))
+          }
 
         </div>
       </section>
