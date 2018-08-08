@@ -1,7 +1,15 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import TestUtils from 'react-dom/test-utils';
+
 import App from '../App.jsx';
 
-it('renders without crashing', () => {
-  shallow(<App />);
-});
+describe('App content testing', () => {
+
+  it('wrap content in a div with .app-container class', () => {
+    const wrapper = TestUtils.renderIntoDocument(<App />);
+    const node =
+    TestUtils
+      .findRenderedDOMComponentWithClass(wrapper, 'app-container');
+  });
+
+})
