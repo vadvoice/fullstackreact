@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import './Person.scss'
+// import './Person.scss'
 
 class Person extends Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class Person extends Component {
       >
         Description:
         <p><i>{person.first_name}</i> <strong>{person.last_name}</strong></p>
-        <p>{person.email}</p>
+        <p className="person-card-email">{person.email}</p>
       </div>
     );
   }

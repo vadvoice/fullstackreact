@@ -14,7 +14,7 @@ import GHStatistics from '../../containers/GHStatistics/GHStatistics';
 import NotFound from '../../components/NotFound/NotFound';
 
 
-import './App.scss';
+// import './App.scss';
 
 class App extends Component {
   render() {
