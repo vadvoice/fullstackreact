@@ -24,9 +24,6 @@
     "eject": "react-scripts eject",
     "deploy": "gh-pages -d ./build"
   },
-  "jest": {
-    "testEnvironment": "node"
-  },
   "devDependencies": {
     "prop-types": "^15.6.1"
   }
